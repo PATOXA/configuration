@@ -22,11 +22,12 @@ if [[ -z "${ANSIBLE_VERSION}" ]]; then
 fi
 
 if [[ -z "${CONFIGURATION_REPO}" ]]; then
-  CONFIGURATION_REPO="https://github.com/edx/configuration.git"
+  CONFIGURATION_REPO="https://github.com/PATOXAT/configuration.git"
 fi
 
 if [[ -z "${CONFIGURATION_VERSION}" ]]; then
-    CONFIGURATION_VERSION=${OPENEDX_RELEASE-master}
+    #CONFIGURATION_VERSION=${OPENEDX_RELEASE-master}
+    CONFIGURATION_VERSION="open-release/ironwood.master"
 fi
 
 if [[ -z "${UPGRADE_OS}" ]]; then
@@ -41,7 +42,7 @@ fi
 # Bootstrapping constants
 #
 VIRTUAL_ENV_VERSION="15.2.0"
-PIP_VERSION="9.0.3"
+PIP_VERSION="20.1.1"
 SETUPTOOLS_VERSION="39.0.1"
 VIRTUAL_ENV="/tmp/bootstrap"
 PYTHON_BIN="${VIRTUAL_ENV}/bin"
